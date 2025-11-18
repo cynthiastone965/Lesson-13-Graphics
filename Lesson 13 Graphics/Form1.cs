@@ -23,11 +23,12 @@ namespace Lesson_13_Graphics
         {
             InitializeComponent();
         }
-
+//This method is created by going to form-properties-lightning bold-paint and double clicking
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            //always start with this!  
+            //always start with this!   This creates the graphics object
             Graphics g = e.Graphics;
+            //sets the background colour
             g.Clear(Color.Blue);
             g.DrawString("This is 0,0", drawFont, greenBrush, 0, 0);
             //the number values are bottom left of string so have to adjust for the actual size
@@ -42,7 +43,8 @@ namespace Lesson_13_Graphics
             //fill ellipse give a circle if width/height the same!
             g.FillEllipse(yellowBrush, xFace, yFace, faceSize, faceSize);
 
-
+            //I chose to make all dimensions based on one face size
+            // and location of centre of screen, but all arguments can be numbers!
             int yEye = yFace + faceSize / 4;
             int eyeSize = faceSize / 12;
             int xLeftEye = xFace + faceSize / 4 - eyeSize / 2;
